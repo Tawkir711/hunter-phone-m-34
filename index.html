@@ -10,23 +10,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body{
-            background-color: yellowgreen;
+            background-color: rgb(213, 135, 10);
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h2 class="text-6xl font-semibold">Hunting phone</h2>
+        <h2 class="text-6xl font-semibold text-white">Hunting phone</h2>
     </header>
     <main class="container mx-auto mt-8">
         <section class="bg-gray-100 p-4 m-4">
             <input id="search-field" type="text" placeholder="search..." class="input input-bordered w-full max-w-xs" />
             <button onclick="handleSearch()" class="btn btn-accent">Search</button>
+
+            <!-- another search field -->
+            <input type="text" placeholder="Search here" id="search-field2" class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearch2()" class="btn btn-primary">Search</button>
         </section>
+
+        <!--  -->
         <section>
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner text-primary loading-lg"></span>
+            </div>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                 
+            </div>
+            <!-- show all button -->
+            <div id="show-all-container" class=" hidden">
+                <button class="btn btn-accent">Show All</button>
             </div>
         </section>
     </main>
