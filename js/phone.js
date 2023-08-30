@@ -83,7 +83,7 @@ const showPhoneDetails = (phone) =>{
     :</span>${phone?.mainFeatures?.sensors
     }</p>
     <p class="font-medium text-xl"><span class="font-semibold text-2xl	">GPS
-    :</span>${phone?.others?.GPS
+    :</span>${phone?.others?.GPS || 'No GPS available in this device'
     }</p>
     <p class="font-medium text-xl"><span class="font-semibold text-2xl	">releaseDate
     :</span>${phone?.releaseDate
@@ -92,8 +92,6 @@ const showPhoneDetails = (phone) =>{
     :</span>${phone?.slug
     }</p>
     
-
-
     `
 
 
